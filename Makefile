@@ -1,8 +1,8 @@
-APP_NAME=JLapp
+APP_NAME=jlapp
 STACK_FILE=stack.yml
 
 build:
-	docker build -t JLimg:latest .
+	docker build -t jlimg:latest .
 
 deploy:
 	docker stack deploy --with-registry-auth -c stack.yml quinto

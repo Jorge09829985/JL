@@ -1,22 +1,22 @@
 version: "3.8"
 
 services:
-  JLapp:
+  jlapp:
     image: ghcr.io/Jorge09829985/jl:latest
     deploy:
       replicas: 1
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.JLapp.entrypoints=http"
-        - "traefik.http.routers.JLapp.rule=Host(`jl.byronrm.com`)"
-        - "traefik.http.middlewares.JLapp-https-redirect.redirectscheme.scheme=https"
-        - "traefik.http.routers.JLapp.middlewares=JLapp-https-redirect"
-        - "traefik.http.routers.JLapp-secure.entrypoints=https"
-        - "traefik.http.routers.JLapp-secure.rule=Host(`jl.byronrm.com`)"
-        - "traefik.http.routers.JLapp-secure.tls=true"
-        - "traefik.http.routers.JLapp-secure.tls.certresolver=http"
-        - "traefik.http.routers.JLapp-secure.service=JLapp"
-        - "traefik.http.services.JLapp.loadbalancer.server.port=80"
+        - "traefik.http.routers.jlapp.entrypoints=http"
+        - "traefik.http.routers.jlapp.rule=Host(` `)"
+        - "traefik.http.middlewares.jlapp-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.jlapp.middlewares=jlapp-https-redirect"
+        - "traefik.http.routers.jlapp-secure.entrypoints=https"
+        - "traefik.http.routers.jlapp-secure.rule=Host(`jl.byronrm.com`)"
+        - "traefik.http.routers.jlapp-secure.tls=true"
+        - "traefik.http.routers.jlapp-secure.tls.certresolver=http"
+        - "traefik.http.routers.jlapp-secure.service=JLapp"
+        - "traefik.http.services.jlapp.loadbalancer.server.port=80"
         - "traefik.docker.network=traefik-public"
     networks:
       - traefik-public
