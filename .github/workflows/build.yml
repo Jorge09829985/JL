@@ -44,8 +44,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/Jorge09829985/JL:latest
-            ghcr.io/Jorge09829985/JL:${{ github.sha }}
+            ghcr.io/jorge09829985/jl:latest
+            ghcr.io/jorge09829985/jl:${{ github.sha }}
 
       - name: ✅ Verify image build
-        run: docker images ghcr.io/Jorge09829985/JL
+        run: docker images ghcr.io/jorge09829985/jl
