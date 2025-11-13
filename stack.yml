@@ -8,11 +8,11 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.JLapp.entrypoints=http"
-        - "traefik.http.routers.JLapp.rule=Host(`jl.escobarponce.com`)"
+        - "traefik.http.routers.JLapp.rule=Host(`jl.byronrm.com`)"
         - "traefik.http.middlewares.JLapp-https-redirect.redirectscheme.scheme=https"
         - "traefik.http.routers.JLapp.middlewares=JLapp-https-redirect"
         - "traefik.http.routers.JLapp-secure.entrypoints=https"
-        - "traefik.http.routers.JLapp-secure.rule=Host(`jl.escobarponce.com`)"
+        - "traefik.http.routers.JLapp-secure.rule=Host(`jl.byronrm.com`)"
         - "traefik.http.routers.JLapp-secure.tls=true"
         - "traefik.http.routers.JLapp-secure.tls.certresolver=http"
         - "traefik.http.routers.JLapp-secure.service=JLapp"
